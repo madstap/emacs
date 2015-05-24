@@ -41,8 +41,11 @@
 ;; http://www.gnu.org/software/emacs/manual/html_node/elisp/Backup-Files.html
 (setq backup-directory-alist `(("." . ,(concat user-emacs-directory
                                                "backups"))))
-(setq auto-save-default nil)
+(setq auto-save-default t)
 
+(setq auto-save-interval 20)
+(setq auto-save-timeout 30)
+;adsdasdasdasdadsasdasd
 
 ;; comments
 (defun toggle-comment-on-line ()
@@ -70,3 +73,10 @@
     (quit nil)))
 
 (setq electric-indent-mode nil)
+
+;; Save on focus lost (The frame's focus that is...)
+(defun save-all ()
+  (interactive)
+  (save-some-buffers t))
+
+(add-hook 'focus-out-hook 'save-all)

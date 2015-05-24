@@ -10,3 +10,10 @@
 
 ;; Go straight to scratch buffer on startup
 (setq inhibit-startup-message t)
+
+;; Use git-gutter everywhere.
+(global-git-gutter-mode t)
+
+(setq auto-save-interval 20)
+(setq auto-save-timeout 30)
+;; testingtestingtestingstisfmidfnsdkfnsdflk
