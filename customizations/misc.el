@@ -14,6 +14,9 @@
 ;; Use git-gutter everywhere.
 (global-git-gutter-mode t)
 
-(setq auto-save-interval 20)
+;; I think that these two don't work that well together.
+; (setq auto-save-interval 20)
 (setq auto-save-timeout 30)
-;; testingtestingtestingstisfmidfnsdkfnsdflk
+
+;; Prevent cider to save on compile
+(setq cider-prompt-save-file-on-load nil)
