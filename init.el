@@ -73,9 +73,11 @@
     magit
 
     ;; Git gutter
-    ;; Seems like the version numbers are out of whack, so I installed it manually. Get back to this at some point.
-    ; git-gutter
-    ))
+    ;; I don't remember why it's git-gutter-fringe instead of just git-gutter,
+    ;;  but I'm pretty sure there was a reason
+    git-gutter-fringe
+
+    clj-refactor))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
@@ -105,12 +107,6 @@
 ;; Adding this code will make Emacs enter yaml mode whenever you open
 ;; a .yml file
 (add-to-list 'load-path "~/.emacs.d/vendor")
-
-;; Manually downloaded instead of through MELPA
-(require 'git-gutter-fringe)
-
-;; Use git-gutter everywhere.
-(global-git-gutter-mode t)
 
 
 ;;;;
@@ -156,10 +152,11 @@
  '(coffee-tab-width 2)
  '(package-selected-packages
    (quote
-    (git-gutter-fringe 4clojure git-gutter+ git-gutter tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous exec-path-from-shell clojure-mode-extra-font-locking cider))))
+    (git-gutter-fringe clj-refactor multiple-cursors tagedit smex rainbow-delimiters projectile paredit magit ido-ubiquitous fringe-helper exec-path-from-shell clojure-mode-extra-font-locking cider 4clojure))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
