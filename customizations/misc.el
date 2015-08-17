@@ -20,3 +20,6 @@
 
 ;; Prevent cider to save on compile
 (setq cider-prompt-save-file-on-load nil)
+
+;; Disable the toolbar
+(tool-bar-mode -1)
