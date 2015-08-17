@@ -138,6 +138,9 @@
 ;; For editing lisps
 (load "elisp-editing.el")
 
+;; Version control stuff
+(load "git.el")
+
 ;; Langauage-specific
 (load "setup-clojure.el")
 (load "setup-js.el")
